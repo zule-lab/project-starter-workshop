@@ -51,4 +51,4 @@ My goal for this workshop is to give everyone the tools to:
 
 ## Check 'em out!
 
-**this workshop - including examples & code can all be found at: https://github.com/zule-lab/project-starter-workshop**
+**This workshop - including examples & code can all be found [here](https://github.com/zule-lab/project-starter-workshop) and formatted slides are [here](https://zule-lab.github.io/project-starter-workshop/)**
