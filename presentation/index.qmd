@@ -6,9 +6,6 @@ format:
   revealjs:
     theme: dark
 editor: visual
-project:
-  type: website
-  output-dir: docs
 ---
 
 # Part I: Prep Work
