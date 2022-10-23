@@ -1,63 +1,63 @@
 [
   {
-    "objectID": "presentation.html#learning-goals",
-    "href": "presentation.html#learning-goals",
+    "objectID": "index.html#learning-goals",
+    "href": "index.html#learning-goals",
     "title": "ZULE’s Project Starter Kit",
     "section": "Learning Goals",
     "text": "Learning Goals\nMy goal for this workshop is to give everyone the tools to:\n\nConfidently start a project in R\nManage files in a way that is reproducible and easy to understand\nAllow people to document progress on their projects\nKnow what they want to learn more about/ask me about in the coming months"
   },
   {
-    "objectID": "presentation.html#software-installation",
-    "href": "presentation.html#software-installation",
+    "objectID": "index.html#software-installation",
+    "href": "index.html#software-installation",
     "title": "ZULE’s Project Starter Kit",
     "section": "Software Installation",
     "text": "Software Installation\n\nCHECK-IN: does everyone have everything working/installed?\nAbsolutely the hardest part of this workshop\nThank you for doing homework!!\n\n\n\nIf you have technical issues throughout this presentation - raise your hand and we will either work through together or Kayleigh will help you troubleshoot"
   },
   {
-    "objectID": "presentation.html#github-version-control",
-    "href": "presentation.html#github-version-control",
+    "objectID": "index.html#github-version-control",
+    "href": "index.html#github-version-control",
     "title": "ZULE’s Project Starter Kit",
     "section": "GitHub & Version Control",
     "text": "GitHub & Version Control"
   },
   {
-    "objectID": "presentation.html#the-basics-of-github",
-    "href": "presentation.html#the-basics-of-github",
+    "objectID": "index.html#the-basics-of-github",
+    "href": "index.html#the-basics-of-github",
     "title": "ZULE’s Project Starter Kit",
     "section": "The Basics of GitHub",
     "text": "The Basics of GitHub"
   },
   {
-    "objectID": "presentation.html#rstudio-projects-data-management",
-    "href": "presentation.html#rstudio-projects-data-management",
+    "objectID": "index.html#rstudio-projects-data-management",
+    "href": "index.html#rstudio-projects-data-management",
     "title": "ZULE’s Project Starter Kit",
     "section": "RStudio Projects & Data Management",
     "text": "RStudio Projects & Data Management"
   },
   {
-    "objectID": "presentation.html#file-management-for-r",
-    "href": "presentation.html#file-management-for-r",
+    "objectID": "index.html#file-management-for-r",
+    "href": "index.html#file-management-for-r",
     "title": "ZULE’s Project Starter Kit",
     "section": "File Management for R",
     "text": "File Management for R"
   },
   {
-    "objectID": "presentation.html#data-in-r",
-    "href": "presentation.html#data-in-r",
+    "objectID": "index.html#data-in-r",
+    "href": "index.html#data-in-r",
     "title": "ZULE’s Project Starter Kit",
     "section": "Data in R!!!",
     "text": "Data in R!!!"
   },
   {
-    "objectID": "presentation.html#clean-data-clean-mind",
-    "href": "presentation.html#clean-data-clean-mind",
+    "objectID": "index.html#clean-data-clean-mind",
+    "href": "index.html#clean-data-clean-mind",
     "title": "ZULE’s Project Starter Kit",
     "section": "Clean Data, Clean Mind",
     "text": "Clean Data, Clean Mind"
   },
   {
-    "objectID": "presentation.html#check-em-out",
-    "href": "presentation.html#check-em-out",
+    "objectID": "index.html#check-em-out",
+    "href": "index.html#check-em-out",
     "title": "ZULE’s Project Starter Kit",
     "section": "Check ’em out!",
     "text": "Check ’em out!\nthis workshop - including examples & code can all be found at: https://github.com/zule-lab/project-starter-workshop"
