@@ -6,6 +6,9 @@ format:
   revealjs:
     theme: dark
 editor: visual
+project:
+  type: website
+  output-dir: docs
 ---
 
 # Part I: Prep Work
@@ -52,4 +55,4 @@ My goal for this workshop is to give everyone the tools to:
 
 # Part 4: Resources
 ## Check 'em out! 
-**this workshop - including examples & slides can all be found at: https://github.com/zule-lab/project-starter-workshop**
+**this workshop - including examples & code can all be found at: https://github.com/zule-lab/project-starter-workshop**
