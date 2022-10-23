@@ -325,30 +325,70 @@
   <p class="date">October 24, 2022</p>
 </section>
 
-<section id="quarto" class="slide level2">
-<h2>Quarto</h2>
-<p>Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <a href="https://quarto.org/docs/presentations/" class="uri">https://quarto.org/docs/presentations/</a>.</p>
+<section>
+<section id="part-i-prep-work" class="title-slide slide level1 center">
+<h1>Part I: Prep Work</h1>
+
 </section>
-<section id="bullets" class="slide level2">
-<h2>Bullets</h2>
-<p>When you click the <strong>Render</strong> button a document will be generated that includes:</p>
+<section id="learning-goals" class="slide level2">
+<h2>Learning Goals</h2>
+<p>My goal for this workshop is to give everyone the tools to:</p>
 <ul>
-<li>Content authored with markdown</li>
-<li>Output from executable code</li>
+<li>Confidently start a project in R</li>
+<li>Manage files in a way that is reproducible and easy to understand</li>
+<li>Allow people to document progress on their projects</li>
+<li>Know what they want to learn more about/ask me about in the coming months</li>
 </ul>
 </section>
-<section id="code" class="slide level2">
-<h2>Code</h2>
-<p>When you click the <strong>Render</strong> button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:</p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
+<section id="software-installation" class="slide level2">
+<h2>Software Installation</h2>
+<ul>
+<li><strong>CHECK-IN: does everyone have everything working/installed?</strong></li>
+<li>Absolutely the hardest part of this workshop</li>
+<li>Thank you for doing homework!!</li>
+</ul>
+<div class="fragment">
+<ul>
+<li>If you have technical issues throughout this presentation - raise your hand and we will either work through together or Kayleigh will help you troubleshoot</li>
+</ul>
 </div>
-</div>
+</section></section>
+<section>
+<section id="part-ii-github" class="title-slide slide level1 center">
+<h1>Part II: GitHub</h1>
+
+</section>
+<section id="github-version-control" class="slide level2">
+<h2>GitHub &amp; Version Control</h2>
+</section>
+<section id="the-basics-of-github" class="slide level2">
+<h2>The Basics of GitHub</h2>
+</section></section>
+<section>
+<section id="part-iii-r-rstudio" class="title-slide slide level1 center">
+<h1>Part III: R &amp; RStudio</h1>
+
+</section>
+<section id="rstudio-projects-data-management" class="slide level2">
+<h2>RStudio Projects &amp; Data Management</h2>
+</section>
+<section id="file-management-for-r" class="slide level2">
+<h2>File Management for R</h2>
+</section>
+<section id="data-in-r" class="slide level2">
+<h2>Data in R!!!</h2>
+</section></section>
+<section>
+<section id="clean-data" class="title-slide slide level1 center">
+<h1>Clean Data</h1>
+
+</section>
+<section id="clean-data-clean-mind" class="slide level2">
+<h2>Clean Data, Clean Mind</h2>
 <div class="footer footer-default">
 
 </div>
-</section>
+</section></section>
     </div>
   </div>
 
@@ -560,48 +600,6 @@
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        function fireSlideChanged(previousSlide, currentSlide) {
-
-          // dispatch for htmlwidgets
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for reveal
-        if (window.Reveal) {
-          window.Reveal.addEventListener("slidechanged", function(event) {
-            fireSlideChanged(event.previousSlide, event.currentSlide);
-          });
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

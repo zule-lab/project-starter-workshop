@@ -8,21 +8,48 @@ format:
 editor: visual
 ---
 
-## Quarto
+# Part I: Prep Work
+## Learning Goals
 
-Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
+My goal for this workshop is to give everyone the tools to:
 
-## Bullets
+- Confidently start a project in R 
+- Manage files in a way that is reproducible and easy to understand
+- Allow people to document progress on their projects
+- Know what they want to learn more about/ask me about in the coming months
 
-When you click the **Render** button a document will be generated that includes:
+## Software Installation
 
--   Content authored with markdown
--   Output from executable code
+- **CHECK-IN: does everyone have everything working/installed?**
+- Absolutely the hardest part of this workshop 
+- Thank you for doing homework!!
 
-## Code
+. . .
 
-When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
 
-```{r}
-1 + 1
-```
+- If you have technical issues throughout this presentation - raise your hand and we will either work through together or Kayleigh will help you troubleshoot
+
+
+# Part II: GitHub
+## GitHub & Version Control
+
+
+## The Basics of GitHub
+
+
+# Part III: R & RStudio
+
+## RStudio Projects & Data Management
+
+
+## File Management for R 
+
+
+## Data in R!!!
+
+# Clean Data
+## Clean Data, Clean Mind
+
+# Part 4: Resources
+## Check 'em out! 
+**this workshop - including examples & slides can all be found at: https://github.com/zule-lab/project-starter-workshop**
