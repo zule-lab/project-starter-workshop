@@ -167,7 +167,7 @@ Let's all set up a project in the repository that we created in the last section
 
 ![](presentation_imgs/myturn.gif)
 
-# Part III: Clean Data
+# Part IV: Clean Data
 
 ## ["Tidy" Data](https://www.jstatsoft.org/article/view/v059i10):
 
@@ -372,7 +372,7 @@ tdf <- tdf %>%
   write_csv("output/TidyData.csv")
 ```
 
-# Part IV: Resources
+# Part V: Resources
 
 ## 
 
