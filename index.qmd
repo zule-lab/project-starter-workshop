@@ -185,10 +185,29 @@ Let's all set up a project in the repository that we created in the last section
 # Clean Data
 
 
-## Clean Data, Clean Mind
+## ["Tidy" Data](https://www.jstatsoft.org/article/view/v059i10):
+
+- Framework for how data should be formatted for easy and efficient data cleaning created by [Hadley Wickham](http://hadley.nz/)
+  - Underpinnings of `tidyverse` packages (e.g. ggplot2)   
+
+Principles:  
+
+1. Each variable forms a column
+2. Each observation forms a row 
+3. Each type of observational unit forms a table
 
 
+## Cleaning Data in R
 
+- Reproducible ^[ [Data Carpentry Data Analysis & Visualiation in R for Ecologists](https://datacarpentry.org/R-ecology-lesson/00-before-we-start.html) ] 
+- Open-source and cross-platform
+- Reliable & clear 
+- High-quality graphics
+- Great community & resources
+- Scales with datasets
+- Steep learning curve with a high payoff 
+
+ 
 
 
 

@@ -98,11 +98,18 @@
     "text": "Your Turn!\nLet’s all set up a project in the repository that we created in the last section"
   },
   {
-    "objectID": "index.html#clean-data-clean-mind",
-    "href": "index.html#clean-data-clean-mind",
+    "objectID": "index.html#tidy-data",
+    "href": "index.html#tidy-data",
     "title": "ZULE’s Project Starter Kit",
-    "section": "Clean Data, Clean Mind",
-    "text": "Clean Data, Clean Mind"
+    "section": "“Tidy” Data:",
+    "text": "“Tidy” Data:\n\nFramework for how data should be formatted for easy and efficient data cleaning created by Hadley Wickham\n\nUnderpinnings of tidyverse packages (e.g. ggplot2)\n\n\nPrinciples:\n\nEach variable forms a column\nEach observation forms a row\nEach type of observational unit forms a table"
+  },
+  {
+    "objectID": "index.html#cleaning-data-in-r",
+    "href": "index.html#cleaning-data-in-r",
+    "title": "ZULE’s Project Starter Kit",
+    "section": "Cleaning Data in R",
+    "text": "Cleaning Data in R\n\nReproducible 1\nOpen-source and cross-platform\nReliable & clear\nHigh-quality graphics\nGreat community & resources\nScales with datasets\nSteep learning curve with a high payoff\n\n Data Carpentry Data Analysis & Visualiation in R for Ecologists"
   },
   {
     "objectID": "index.html#section-1",
