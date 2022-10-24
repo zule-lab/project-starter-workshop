@@ -63,11 +63,11 @@
     "text": "Cloning (perfect for spooky season)"
   },
   {
-    "objectID": "index.html#section-1",
-    "href": "index.html#section-1",
+    "objectID": "index.html#your-turn",
+    "href": "index.html#your-turn",
     "title": "ZULE’s Project Starter Kit",
-    "section": "",
-    "text": "Now you should have an (almost) empty repository/folder on your computer… Let’s fill it!"
+    "section": "Your Turn!",
+    "text": "Your Turn!\nLet’s all try to make a repository on GitHub and clone it to our local computers"
   },
   {
     "objectID": "index.html#project-management-in-r",
@@ -91,11 +91,11 @@
     "text": "Basic File Structure"
   },
   {
-    "objectID": "index.html#data-in-r",
-    "href": "index.html#data-in-r",
+    "objectID": "index.html#your-turn-1",
+    "href": "index.html#your-turn-1",
     "title": "ZULE’s Project Starter Kit",
-    "section": "Data in R!!!",
-    "text": "Data in R!!!"
+    "section": "Your Turn!",
+    "text": "Your Turn!\nLet’s all set up a project in the repository that we created in the last section"
   },
   {
     "objectID": "index.html#clean-data-clean-mind",
@@ -105,8 +105,8 @@
     "text": "Clean Data, Clean Mind"
   },
   {
-    "objectID": "index.html#section-2",
-    "href": "index.html#section-2",
+    "objectID": "index.html#section-1",
+    "href": "index.html#section-1",
     "title": "ZULE’s Project Starter Kit",
     "section": "",
     "text": "This workshop - including examples & code can all be found here and formatted slides are here\nSoftware Carpentry: R for Reproducible Scientific Analysis & Version Control with git\nData Carpentry: Data Analysis & Visualization in R for Ecologists & Data Organization in Spreadsheets for Ecologists\nSmart People I Know: Dr. Christie Bahlai’s Reproducible Quantitative Methods Course & Wildlife Ecology & Evolution Lab’s Guide by Alec Robitaille & Val Lucet’s Git Workshop\nPLUS: check out our zup “stats” thread - lots of helpful resources! AND ASK YOUR LABMATES!!!!"

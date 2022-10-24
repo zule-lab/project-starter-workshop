@@ -135,9 +135,12 @@ digraph G {
 :::
 
 
-##
+## Your Turn! 
 
-Now you should have an (almost) empty repository/folder on your computer... Let's fill it! 
+Let's all try to make a repository on GitHub and clone it to our local computers 
+
+![](presentation_imgs/myturn.gif)
+
 
 
 # Part III: R & RStudio
@@ -172,13 +175,14 @@ Best practices include (but are not limited to) ^[ [Software Carpentry Project M
 
 ![](presentation_imgs/filestructure.png)
 
+## Your Turn! 
 
-## Data in R!!!
+Let's all set up a project in the repository that we created in the last section
 
+![](presentation_imgs/myturn.gif)
 
 
 # Clean Data
-
 
 
 ## Clean Data, Clean Mind
