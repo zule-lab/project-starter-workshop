@@ -39,7 +39,21 @@
     "href": "index.html#the-basics-of-github",
     "title": "ZULE’s Project Starter Kit",
     "section": "The Basics of GitHub",
-    "text": "The Basics of GitHub"
+    "text": "The Basics of GitHub\n\n5 basic jargon terms you need to know to use GitHub:\n\nRepository/repo: your project\nClone: make a local copy of your project\nCommit: describe and commit to any changes you’ve made\nPush: send your changes to your online repo\nPull: incorporate any changes to your local repo\n(BONUS branch: a side project)\n\nWe will do all these things today!"
+  },
+  {
+    "objectID": "index.html#lets-make-a-project",
+    "href": "index.html#lets-make-a-project",
+    "title": "ZULE’s Project Starter Kit",
+    "section": "Let’s Make a Project!",
+    "text": "Let’s Make a Project!\ngithub.com"
+  },
+  {
+    "objectID": "index.html#lets-make-a-project-1",
+    "href": "index.html#lets-make-a-project-1",
+    "title": "ZULE’s Project Starter Kit",
+    "section": "Let’s Make a Project!",
+    "text": "Let’s Make a Project!\n{fig-align = “center”, width = 10%, height = 10%}"
   },
   {
     "objectID": "index.html#rstudio-projects-data-management",

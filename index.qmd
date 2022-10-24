@@ -97,6 +97,30 @@ digraph G {
 
 ## The Basics of GitHub
 
+- 5 basic jargon terms you need to know to use GitHub:
+  - Repository/repo: your project
+  - Clone: make a local copy of your project
+  - Commit: describe and commit to any changes you've made
+  - Push: send your changes to your online repo
+  - Pull: incorporate any changes to your local repo
+  - (BONUS branch: a side project)
+
+- *We will do all these things today!*
+
+
+## Let's Make a Project!
+
+### [github.com](www.github.com)
+
+![](presentation_imgs/newrepo.JPG){fig-align="center"}
+
+
+## Let's Make a Project!
+
+![](presentation_imgs/newrepo2.JPG){fig-align = "center", width = 10%, height = 10%}
+
+
+# Cloning (perfect for spooky season)
 
 
 # Part III: R & RStudio
