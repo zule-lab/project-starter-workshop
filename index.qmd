@@ -142,13 +142,44 @@ Now you should have an (almost) empty repository/folder on your computer... Let'
 
 # Part III: R & RStudio
 
-## RStudio Projects & Data Management
+## Project Management in R
 
-## File Management for R
+Good file structure is important because it ^[ [Software Carpentry Project Management](https://swcarpentry.github.io/r-novice-gapminder/02-project-intro/index.html) ] 
+
+::: incremental
+- Ensures the integrity of your data 
+- Makes it easier to share your code with people 
+- Makes it easier to upload your code/data with manuscript submission 
+- Makes it easier to come back after a break 
+:::
+
+
+## File Management for R 
+
+Best practices include (but are not limited to) ^[ [Software Carpentry Project Management](https://swcarpentry.github.io/r-novice-gapminder/02-project-intro/index.html) ] 
+
+::: incremental
+- Use an R Project file so that your project is easily shareable
+- Always treat raw data as read-only
+- Store cleaned data in a separate folder (or distinguish clearly)
+- Treat output as disposable - you should always be able to re-generate with script
+- Have separate function and figure scripts
+:::
+
+
+## Basic File Structure
+
+
+![](presentation_imgs/filestructure.png)
+
 
 ## Data in R!!!
 
+
+
 # Clean Data
+
+
 
 ## Clean Data, Clean Mind
 

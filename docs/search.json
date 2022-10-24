@@ -70,18 +70,25 @@
     "text": "Now you should have an (almost) empty repository/folder on your computer… Let’s fill it!"
   },
   {
-    "objectID": "index.html#rstudio-projects-data-management",
-    "href": "index.html#rstudio-projects-data-management",
+    "objectID": "index.html#project-management-in-r",
+    "href": "index.html#project-management-in-r",
     "title": "ZULE’s Project Starter Kit",
-    "section": "RStudio Projects & Data Management",
-    "text": "RStudio Projects & Data Management"
+    "section": "Project Management in R",
+    "text": "Project Management in R\nGood file structure is important because it 1\n\n\nEnsures the integrity of your data\nMakes it easier to share your code with people\nMakes it easier to upload your code/data with manuscript submission\nMakes it easier to come back after a break\n\n\n Software Carpentry Project Management"
   },
   {
     "objectID": "index.html#file-management-for-r",
     "href": "index.html#file-management-for-r",
     "title": "ZULE’s Project Starter Kit",
     "section": "File Management for R",
-    "text": "File Management for R"
+    "text": "File Management for R\nBest practices include (but are not limited to) 1\n\n\nUse an R Project file so that your project is easily shareable\nAlways treat raw data as read-only\nStore cleaned data in a separate folder (or distinguish clearly)\nTreat output as disposable - you should always be able to re-generate with script\nHave separate function and figure scripts\n\n\n Software Carpentry Project Management"
+  },
+  {
+    "objectID": "index.html#basic-file-structure",
+    "href": "index.html#basic-file-structure",
+    "title": "ZULE’s Project Starter Kit",
+    "section": "Basic File Structure",
+    "text": "Basic File Structure"
   },
   {
     "objectID": "index.html#data-in-r",
