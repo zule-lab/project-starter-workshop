@@ -14,10 +14,17 @@ editor: visual
 
 My goal for this workshop is to give everyone the tools to:
 
+::: {.incremental}
 -   Confidently start a project in R
 -   Manage files in a way that is reproducible and easy to understand
 -   Allow people to document progress on their projects
 -   Know what they want to learn more about/ask me about in the coming months
+:::
+
+##
+
+![](presentation_imgs/righttool.PNG){fig-align="center"}
+
 
 ## Software Installation
 
@@ -32,6 +39,7 @@ My goal for this workshop is to give everyone the tools to:
 # Part II: GitHub
 
 ## GitHub & Version Control
+
 
 ## The Basics of GitHub
 
@@ -49,6 +57,15 @@ My goal for this workshop is to give everyone the tools to:
 
 # Part 4: Resources
 
-## Check 'em out!
+##
 
 **This workshop - including examples & code can all be found [here](https://github.com/zule-lab/project-starter-workshop) and formatted slides are [here](https://zule-lab.github.io/project-starter-workshop/)**
+
+Software Carpentry: [R for Reproducible Scientific Analysis](https://swcarpentry.github.io/r-novice-gapminder/)
+& [Version Control with git](https://swcarpentry.github.io/git-novice/)
+
+Data Carpentry: [Data Analysis & Visualization in R for Ecologists](https://datacarpentry.org/R-ecology-lesson/index.html) & [Data Organization in Spreadsheets for Ecologists](https://datacarpentry.org/R-ecology-lesson/index.html)
+
+Smart People I Know: [Dr. Christie Bahlai's Reproducible Quantitative Methods Course](https://cbahlai.github.io/rqm-template/) & [Wildlife Ecology & Evolution Lab's Guide by Alec Robitaille](https://weel.gitlab.io/guide/) & [Val Lucet's Git Workshop](https://vlucet.github.io/git-and-github-with-r-workshop/)
+
+**PLUS: check out our zup "stats" thread - lots of helpful resources! AND ASK YOUR LABMATES!!!!**

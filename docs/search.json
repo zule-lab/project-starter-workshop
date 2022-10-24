@@ -4,7 +4,7 @@
     "href": "index.html#learning-goals",
     "title": "ZULE’s Project Starter Kit",
     "section": "Learning Goals",
-    "text": "Learning Goals\nMy goal for this workshop is to give everyone the tools to:\n\nConfidently start a project in R\nManage files in a way that is reproducible and easy to understand\nAllow people to document progress on their projects\nKnow what they want to learn more about/ask me about in the coming months"
+    "text": "Learning Goals\nMy goal for this workshop is to give everyone the tools to:\n\n\nConfidently start a project in R\nManage files in a way that is reproducible and easy to understand\nAllow people to document progress on their projects\nKnow what they want to learn more about/ask me about in the coming months"
   },
   {
     "objectID": "index.html#software-installation",
@@ -56,10 +56,10 @@
     "text": "Clean Data, Clean Mind"
   },
   {
-    "objectID": "index.html#check-em-out",
-    "href": "index.html#check-em-out",
+    "objectID": "index.html#section-1",
+    "href": "index.html#section-1",
     "title": "ZULE’s Project Starter Kit",
-    "section": "Check ’em out!",
-    "text": "Check ’em out!\nThis workshop - including examples & code can all be found here and formatted slides are here"
+    "section": "",
+    "text": "This workshop - including examples & code can all be found here and formatted slides are here\nSoftware Carpentry: R for Reproducible Scientific Analysis & Version Control with git\nData Carpentry: Data Analysis & Visualization in R for Ecologists & Data Organization in Spreadsheets for Ecologists\nSmart People I Know: Dr. Christie Bahlai’s Reproducible Quantitative Methods Course & Wildlife Ecology & Evolution Lab’s Guide by Alec Robitaille & Val Lucet’s Git Workshop\nPLUS: check out our zup “stats” thread - lots of helpful resources! AND ASK YOUR LABMATES!!!!"
   }
 ]
