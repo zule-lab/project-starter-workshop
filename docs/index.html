@@ -7,11 +7,11 @@
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.0.36">
+  <meta name="generator" content="quarto-1.2.237">
 
   <meta name="author" content="Isabella Richmond &amp; Kayleigh Hutt-Taylor">
   <meta name="dcterms.date" content="2022-10-24">
-  <title>ZULE’s Project Starter Kit</title>
+  <title>presentation - ZULE’s Project Starter Kit</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -20,10 +20,15 @@
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
   </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -319,12 +324,19 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="center">
+<section id="title-slide" class="quarto-title-block center">
   <h1 class="title">ZULE’s Project Starter Kit</h1>
-  <p class="author">Isabella Richmond &amp; Kayleigh Hutt-Taylor</p>
-  <p class="date">October 24, 2022</p>
-</section>
 
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Isabella Richmond &amp; Kayleigh Hutt-Taylor 
+</div>
+</div>
+</div>
+
+  <p class="date">10/24/22</p>
+</section>
 <section>
 <section id="part-i-prep-work" class="title-slide slide level1 center">
 <h1>Part I: Prep Work</h1>
@@ -379,7 +391,7 @@
 <div class="cell-output-display">
 <div>
 <p>
-<svg width="960" height="78" viewbox="0.00 0.00 881.18 72.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style=" display: block; margin: auto auto auto auto">
+<svg width="960" height="480" viewbox="0.00 0.00 881.18 72.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style=" display: block; margin: auto auto auto auto">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 68)">
 <title>
 G
@@ -535,7 +547,7 @@ RStudio_Project-&gt;data_cleaning
 <li class="fragment">Makes it easier to come back after a break</li>
 </ul>
 </div>
-<aside><ol class="aside-footnotes"><li id="fn1" role="doc-endnote"><p> <a href="https://swcarpentry.github.io/r-novice-gapminder/02-project-intro/index.html">Software Carpentry Project Management</a> </p></li></ol></aside></section>
+<aside><ol class="aside-footnotes"><li id="fn1"><p> <a href="https://swcarpentry.github.io/r-novice-gapminder/02-project-intro/index.html">Software Carpentry Project Management</a> </p></li></ol></aside></section>
 <section id="file-management-for-r" class="slide level2">
 <h2>File Management for R</h2>
 <p>Best practices include (but are not limited to) <sup>1</sup></p>
@@ -548,7 +560,7 @@ RStudio_Project-&gt;data_cleaning
 <li class="fragment">Have separate function and figure scripts</li>
 </ul>
 </div>
-<aside><ol class="aside-footnotes"><li id="fn2" role="doc-endnote"><p> <a href="https://swcarpentry.github.io/r-novice-gapminder/02-project-intro/index.html">Software Carpentry Project Management</a> </p></li></ol></aside></section>
+<aside><ol class="aside-footnotes"><li id="fn2"><p> <a href="https://swcarpentry.github.io/r-novice-gapminder/02-project-intro/index.html">Software Carpentry Project Management</a> </p></li></ol></aside></section>
 <section id="basic-file-structure" class="slide level2">
 <h2>Basic File Structure</h2>
 
@@ -831,7 +843,24 @@ RStudio_Project-&gt;data_cleaning
         button.classList.add('code-copy-button-checked');
         var currentTitle = button.getAttribute("title");
         button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
         setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
           button.setAttribute("title", currentTitle);
           button.classList.remove('code-copy-button-checked');
         }, 1000);
@@ -861,31 +890,50 @@ RStudio_Project-&gt;data_cleaning
       for (var i=0; i<noterefs.length; i++) {
         const ref = noterefs[i];
         tippyHover(ref, function() {
-          let href = ref.getAttribute('href');
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
           return note.innerHTML;
         });
       }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
       var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
       for (var i=0; i<bibliorefs.length; i++) {
         const ref = bibliorefs[i];
-        const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-        tippyHover(ref, function() {
-          var popup = window.document.createElement('div');
-          cites.forEach(function(cite) {
-            var citeDiv = window.document.createElement('div');
-            citeDiv.classList.add('hanging-indent');
-            citeDiv.classList.add('csl-entry');
-            var biblioDiv = window.document.getElementById('ref-' + cite);
-            if (biblioDiv) {
-              citeDiv.innerHTML = biblioDiv.innerHTML;
-            }
-            popup.appendChild(citeDiv);
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
           });
-          return popup.innerHTML;
-        });
+        }
       }
     });
     </script>
