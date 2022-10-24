@@ -77,6 +77,8 @@ digraph G {
 :::
 
 
+
+
 # Part II: GitHub
 
 ## GitHub & Version Control
@@ -110,7 +112,7 @@ digraph G {
 
 ## Let's Make a Project!
 
-### [github.com](www.github.com)
+[github.com](www.github.com)
 
 ![](presentation_imgs/newrepo.JPG){fig-align="center"}
 
@@ -123,6 +125,7 @@ digraph G {
 [ZULE's GitHub](https://github.com/zule-lab) has lots of repositories (including examples) if you are looking for inspiration for folder organization, ReadMe documentation, metadata, etc.
 :::
 
+
 ## Cloning (perfect for spooky season)
 
 ::: {layout-ncol=2}
@@ -130,6 +133,12 @@ digraph G {
 
 ![](presentation_imgs/cloning2.PNG)
 :::
+
+
+##
+
+Now you should have an (almost) empty repository/folder on your computer... Let's fill it! 
+
 
 # Part III: R & RStudio
 
@@ -142,6 +151,11 @@ digraph G {
 # Clean Data
 
 ## Clean Data, Clean Mind
+
+
+
+
+
 
 # Part 4: Resources
 
