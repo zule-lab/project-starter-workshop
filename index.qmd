@@ -21,7 +21,6 @@ My goal for this workshop is to give everyone the tools to:
 -   Know what they want to learn more about/ask me about in the coming months
 :::
 
-
 ## 
 
 ![](presentation_imgs/righttool.PNG){fig-align="center"}
@@ -29,7 +28,6 @@ My goal for this workshop is to give everyone the tools to:
 ::: aside
 https://sciencecomputing.io/
 :::
-
 
 ## Software Installation
 
@@ -40,7 +38,6 @@ https://sciencecomputing.io/
 . . .
 
 -   If you have technical issues throughout this presentation - raise your hand and we will either work through together or Kayleigh will help you troubleshoot
-
 
 ## Project Workflow (yours can be different!)
 
@@ -76,39 +73,32 @@ digraph G {
 ```
 :::
 
-
-
-
 # Part II: GitHub
 
 ## GitHub & Version Control
 
 ::: incremental
+-   GitHub is a website-software that documents your progress on a project and allows you to do *version control*
 
-- GitHub is a website-software that documents your progress on a project and allows you to do *version control*
-  - aka it takes snapshots of your progress across time so nothing gets lost
-  
-- If you save rough drafts of your writing as you go along - that is version control
+    -   aka it takes snapshots of your progress across time so nothing gets lost
 
-- Really useful for when you want to go back/change your mind/re-run a test/etc. 
+-   If you save rough drafts of your writing as you go along - that is version control
 
-- Facilitates peace of mind + reproducible science + collaboration/sharing
+-   Really useful for when you want to go back/change your mind/re-run a test/etc.
 
+-   Facilitates peace of mind + reproducible science + collaboration/sharing
 :::
-
 
 ## The Basics of GitHub
 
-- 5 basic jargon terms you need to know to use GitHub:
-  - Repository/repo: your project
-  - Clone: make a local copy of your project
-  - Commit: describe and commit to any changes you've made
-  - Push: send your changes to your online repo
-  - Pull: incorporate any changes to your local repo
-  - (BONUS branch: a side project)
-
-- *We will do all these things today!*
-
+-   5 basic jargon terms you need to know to use GitHub:
+    -   Repository/repo: your project
+    -   Clone: make a local copy of your project
+    -   Commit: describe and commit to any changes you've made
+    -   Push: send your changes to your online repo
+    -   Pull: incorporate any changes to your local repo
+    -   (BONUS branch: a side project)
+-   *We will do all these things today!*
 
 ## Let's Make a Project!
 
@@ -116,106 +106,99 @@ digraph G {
 
 ![](presentation_imgs/newrepo.JPG){fig-align="center"}
 
-
 ## Let's Make a Project!
 
-::: {layout-ncol=2}
+::: {layout-ncol="2"}
 ![](presentation_imgs/newrepo2.JPG)
 
 [ZULE's GitHub](https://github.com/zule-lab) has lots of repositories (including examples) if you are looking for inspiration for folder organization, ReadMe documentation, metadata, etc.
 :::
 
-
 ## Cloning (perfect for spooky season)
 
-::: {layout-ncol=2}
+::: {layout-ncol="2"}
 ![](presentation_imgs/cloning1.JPG)
 
 ![](presentation_imgs/cloning2.PNG)
 :::
 
+## Your Turn!
 
-## Your Turn! 
-
-Let's all try to make a repository on GitHub and clone it to our local computers 
+Let's all try to make a repository on GitHub and clone it to our local computers
 
 ![](presentation_imgs/myturn.gif)
-
-
 
 # Part III: R & RStudio
 
 ## Project Management in R
 
-Good file structure is important because it ^[ [Software Carpentry Project Management](https://swcarpentry.github.io/r-novice-gapminder/02-project-intro/index.html) ] 
+Good file structure is important because it [^1]
+
+[^1]:  [Software Carpentry Project Management](https://swcarpentry.github.io/r-novice-gapminder/02-project-intro/index.html)
 
 ::: incremental
-- Ensures the integrity of your data 
-- Makes it easier to share your code with people 
-- Makes it easier to upload your code/data with manuscript submission 
-- Makes it easier to come back after a break 
+-   Ensures the integrity of your data
+-   Makes it easier to share your code with people
+-   Makes it easier to upload your code/data with manuscript submission
+-   Makes it easier to come back after a break
 :::
 
+## File Management for R
 
-## File Management for R 
+Best practices include (but are not limited to) [^2]
 
-Best practices include (but are not limited to) ^[ [Software Carpentry Project Management](https://swcarpentry.github.io/r-novice-gapminder/02-project-intro/index.html) ] 
+[^2]:  [Software Carpentry Project Management](https://swcarpentry.github.io/r-novice-gapminder/02-project-intro/index.html)
 
 ::: incremental
-- Use an R Project file so that your project is easily shareable
-- Always treat raw data as read-only
-- Store cleaned data in a separate folder (or distinguish clearly)
-- Treat output as disposable - you should always be able to re-generate with script
-- Have separate function and figure scripts
+-   Use an R Project file so that your project is easily shareable
+-   Always treat raw data as read-only
+-   Store cleaned data in a separate folder (or distinguish clearly)
+-   Treat output as disposable - you should always be able to re-generate with script
+-   Have separate function and figure scripts
 :::
-
 
 ## Basic File Structure
 
-
 ![](presentation_imgs/filestructure.png)
 
-## Your Turn! 
+## Your Turn!
 
 Let's all set up a project in the repository that we created in the last section
 
 ![](presentation_imgs/myturn.gif)
 
-
-# Clean Data
-
+# Part III: Clean Data
 
 ## ["Tidy" Data](https://www.jstatsoft.org/article/view/v059i10):
 
-- Framework for how data should be formatted for easy and efficient data cleaning created by [Hadley Wickham](http://hadley.nz/)
-  - Underpinnings of `tidyverse` packages (e.g. ggplot2)   
+-   Framework for how data should be formatted for easy and efficient data cleaning created by [Hadley Wickham](http://hadley.nz/)
+    -   Underpinnings of `tidyverse` packages (e.g. ggplot2)
 
-Principles:  
+Principles:
 
-1. Each variable forms a column
-2. Each observation forms a row 
-3. Each type of observational unit forms a table
-
+1.  Each variable forms a column
+2.  Each observation forms a row
+3.  Each type of observational unit forms a table
 
 ## Cleaning Data in R
 
-- Reproducible ^[ [Data Carpentry Data Analysis & Visualiation in R for Ecologists](https://datacarpentry.org/R-ecology-lesson/00-before-we-start.html) ] 
-- Open-source and cross-platform
-- Reliable & clear 
-- High-quality graphics
-- Great community & resources
-- Scales with datasets
-- Steep learning curve with a high payoff 
+-   Reproducible [^3]
+-   Open-source and cross-platform
+-   Reliable & clear
+-   High-quality graphics
+-   Great community & resources
+-   Scales with datasets
+-   Steep learning curve with a high payoff
 
+[^3]:  [Data Carpentry Data Analysis & Visualiation in R for Ecologists](https://datacarpentry.org/R-ecology-lesson/00-before-we-start.html)
 
 ## Your Turn! (if we have time)
 
 Let's do some data cleaning! This code was written for a previous ZULE [workshop](https://github.com/zule-lab/data-cleaning-workshop)
 
-- Download dataset from [here](https://github.com/zule-lab/data-cleaning-workshop/tree/main/example) and put it in the `input/` folder you made earlier 
+-   Download dataset from [here](https://github.com/zule-lab/data-cleaning-workshop/tree/main/example) and put it in the `input/` folder you made earlier
 
-- **NOTE:** we only have code for `tidyverse` cleaning in this presentation, but the previous [workshop](https://github.com/zule-lab/data-cleaning-workshop) also goes through all these steps using `data.table`
-
+-   **NOTE:** we only have code for `tidyverse` cleaning in this presentation, but the previous [workshop](https://github.com/zule-lab/data-cleaning-workshop) also goes through all these steps using `data.table`
 
 ## Reading Data
 
@@ -243,7 +226,6 @@ tdf <- read_delim("input/example-data.csv", delim = ";", skip = 8)
 # adding the skip argument fixes our problems! Now we can move on to other formatting issues... 
 ```
 
-
 ## Special Characters
 
 ```{r, echo = T, eval = F}
@@ -254,7 +236,6 @@ tdf <- read_delim("input/example-data.csv", delim = ";", skip = 8)
 # tidyverse can be re-encoded after import 
 tdf$City <- enc2utf8(as(tdf$City, "character"))
 ```
-
 
 ## NAs & Associated Values
 
@@ -272,8 +253,8 @@ tdf$DBH <- na_if(tdf$DBH, 0) # tidyverse
 tdf <- drop_na(tdf) # tidyverse
 ```
 
-
 ## Duplicates
+
 ```{r, echo = T, eval = F}
 #### 4. Duplicates ----------------------------------------------
 # sometimes, there are duplicate observations/rows in datasets. These can really mess up your analysis if you don't catch them
@@ -284,7 +265,6 @@ tdup <- tdf[duplicated(tdf), c("TreeID", "City", "DBH", "Species,")]
 tdf <- distinct(tdf)
 
 ```
-
 
 ## Column Names
 
@@ -301,6 +281,7 @@ tdf <- rename(tdf,
 ```
 
 ## Value Formatting
+
 ```{r, echo = T, eval = F}
 #### 6. Value Formatting ---------------------------------------
 ## Spelling mistakes 
@@ -350,8 +331,8 @@ tdf_wide <- pivot_wider(tdf, names_from = Species, values_from = DBH)
 tdf_long <- pivot_longer(tdf_wide, cols = 4:14, names_to = "Species", values_to = "DBH", values_drop_na = T)
 ```
 
-
 ## Saving & Exporting
+
 ```{r, echo = T, eval = F}
 #### 9. Saving/Exporting Data ----------------------------------
 # don't forget to save your beautiful, cleaned data!
@@ -363,8 +344,8 @@ saveRDS(tdf, "output/TidyData.rds")
 write_csv(tdf, "output/TidyData.csv")
 ```
 
-
 ## BONUS: Piping
+
 ```{r, echo = T, eval = F}
 #### BONUS: Piping ---------------------------------------------
 # you may be wondering why tidyverse has so many seemingly redundant functions with baseR
@@ -391,10 +372,7 @@ tdf <- tdf %>%
   write_csv("output/TidyData.csv")
 ```
 
-
-
-
-# Part 4: Resources
+# Part IV: Resources
 
 ## 
 

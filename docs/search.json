@@ -74,14 +74,14 @@
     "href": "index.html#project-management-in-r",
     "title": "ZULE’s Project Starter Kit",
     "section": "Project Management in R",
-    "text": "Project Management in R\nGood file structure is important because it 1\n\n\nEnsures the integrity of your data\nMakes it easier to share your code with people\nMakes it easier to upload your code/data with manuscript submission\nMakes it easier to come back after a break\n\n\n Software Carpentry Project Management"
+    "text": "Project Management in R\nGood file structure is important because it 1\n\n\nEnsures the integrity of your data\nMakes it easier to share your code with people\nMakes it easier to upload your code/data with manuscript submission\nMakes it easier to come back after a break\n\n\nSoftware Carpentry Project Management"
   },
   {
     "objectID": "index.html#file-management-for-r",
     "href": "index.html#file-management-for-r",
     "title": "ZULE’s Project Starter Kit",
     "section": "File Management for R",
-    "text": "File Management for R\nBest practices include (but are not limited to) 1\n\n\nUse an R Project file so that your project is easily shareable\nAlways treat raw data as read-only\nStore cleaned data in a separate folder (or distinguish clearly)\nTreat output as disposable - you should always be able to re-generate with script\nHave separate function and figure scripts\n\n\n Software Carpentry Project Management"
+    "text": "File Management for R\nBest practices include (but are not limited to) 1\n\n\nUse an R Project file so that your project is easily shareable\nAlways treat raw data as read-only\nStore cleaned data in a separate folder (or distinguish clearly)\nTreat output as disposable - you should always be able to re-generate with script\nHave separate function and figure scripts\n\n\nSoftware Carpentry Project Management"
   },
   {
     "objectID": "index.html#basic-file-structure",
@@ -109,7 +109,7 @@
     "href": "index.html#cleaning-data-in-r",
     "title": "ZULE’s Project Starter Kit",
     "section": "Cleaning Data in R",
-    "text": "Cleaning Data in R\n\nReproducible 1\nOpen-source and cross-platform\nReliable & clear\nHigh-quality graphics\nGreat community & resources\nScales with datasets\nSteep learning curve with a high payoff\n\n Data Carpentry Data Analysis & Visualiation in R for Ecologists"
+    "text": "Cleaning Data in R\n\nReproducible 1\nOpen-source and cross-platform\nReliable & clear\nHigh-quality graphics\nGreat community & resources\nScales with datasets\nSteep learning curve with a high payoff\n\nData Carpentry Data Analysis & Visualiation in R for Ecologists"
   },
   {
     "objectID": "index.html#your-turn-if-we-have-time",
