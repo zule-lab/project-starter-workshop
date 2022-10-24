@@ -117,11 +117,19 @@ digraph G {
 
 ## Let's Make a Project!
 
-![](presentation_imgs/newrepo2.JPG){fig-align = "center", width = 10%, height = 10%}
+::: {layout-ncol=2}
+![](presentation_imgs/newrepo2.JPG)
 
+[ZULE's GitHub](https://github.com/zule-lab) has lots of repositories (including examples) if you are looking for inspiration for folder organization, ReadMe documentation, metadata, etc.
+:::
 
-# Cloning (perfect for spooky season)
+## Cloning (perfect for spooky season)
 
+::: {layout-ncol=2}
+![](presentation_imgs/cloning1.JPG)
+
+![](presentation_imgs/cloning2.PNG)
+:::
 
 # Part III: R & RStudio
 

@@ -53,7 +53,14 @@
     "href": "index.html#lets-make-a-project-1",
     "title": "ZULE’s Project Starter Kit",
     "section": "Let’s Make a Project!",
-    "text": "Let’s Make a Project!\n{fig-align = “center”, width = 10%, height = 10%}"
+    "text": "Let’s Make a Project!\n\n\n\n\n\n\nZULE’s GitHub has lots of repositories (including examples) if you are looking for inspiration for folder organization, ReadMe documentation, metadata, etc."
+  },
+  {
+    "objectID": "index.html#cloning-perfect-for-spooky-season",
+    "href": "index.html#cloning-perfect-for-spooky-season",
+    "title": "ZULE’s Project Starter Kit",
+    "section": "Cloning (perfect for spooky season)",
+    "text": "Cloning (perfect for spooky season)"
   },
   {
     "objectID": "index.html#rstudio-projects-data-management",
