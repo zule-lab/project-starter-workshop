@@ -29,6 +29,70 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #f8f8f2;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #f8f8f2; } /* Normal */
+    code span.al { color: #f07178; background-color: #2a0f15; font-weight: bold; } /* Alert */
+    code span.an { color: #d4d0ab; } /* Annotation */
+    code span.at { color: #00e0e0; } /* Attribute */
+    code span.bn { color: #d4d0ab; } /* BaseN */
+    code span.bu { color: #abe338; } /* BuiltIn */
+    code span.cf { color: #ffa07a; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #abe338; } /* Char */
+    code span.cn { color: #ffd700; } /* Constant */
+    code span.co { color: #f8f8f2; font-style: italic; } /* Comment */
+    code span.cv { color: #ffd700; } /* CommentVar */
+    code span.do { color: #f8f8f2; } /* Documentation */
+    code span.dt { color: #ffa07a; } /* DataType */
+    code span.dv { color: #d4d0ab; } /* DecVal */
+    code span.er { color: #f07178; text-decoration: underline; } /* Error */
+    code span.ex { color: #00e0e0; font-weight: bold; } /* Extension */
+    code span.fl { color: #d4d0ab; } /* Float */
+    code span.fu { color: #ffa07a; } /* Function */
+    code span.im { color: #abe338; } /* Import */
+    code span.in { color: #d4d0ab; } /* Information */
+    code span.kw { color: #ffa07a; font-weight: bold; } /* Keyword */
+    code span.op { color: #ffa07a; } /* Operator */
+    code span.ot { color: #00e0e0; } /* Other */
+    code span.pp { color: #dcc6e0; } /* Preprocessor */
+    code span.re { color: #00e0e0; background-color: #f8f8f2; } /* RegionMarker */
+    code span.sc { color: #abe338; } /* SpecialChar */
+    code span.ss { color: #abe338; } /* SpecialString */
+    code span.st { color: #abe338; } /* String */
+    code span.va { color: #00e0e0; } /* Variable */
+    code span.vs { color: #abe338; } /* VerbatimString */
+    code span.wa { color: #dcc6e0; } /* Warning */
   </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -602,7 +666,184 @@ RStudio_Project-&gt;data_cleaning
 <li>Scales with datasets</li>
 <li>Steep learning curve with a high payoff</li>
 </ul>
-<aside><ol class="aside-footnotes"><li id="fn3"><p> <a href="https://datacarpentry.org/R-ecology-lesson/00-before-we-start.html">Data Carpentry Data Analysis &amp; Visualiation in R for Ecologists</a> </p></li></ol></aside></section></section>
+<aside><ol class="aside-footnotes"><li id="fn3"><p> <a href="https://datacarpentry.org/R-ecology-lesson/00-before-we-start.html">Data Carpentry Data Analysis &amp; Visualiation in R for Ecologists</a> </p></li></ol></aside></section>
+<section id="your-turn-if-we-have-time" class="slide level2">
+<h2>Your Turn! (if we have time)</h2>
+<p>Let’s do some data cleaning! This code was written for a previous ZULE <a href="https://github.com/zule-lab/data-cleaning-workshop">workshop</a></p>
+<ul>
+<li><p>Download dataset from <a href="https://github.com/zule-lab/data-cleaning-workshop/tree/main/example">here</a> and put it in the <code>input/</code> folder you made earlier</p></li>
+<li><p><strong>NOTE:</strong> we only have code for <code>tidyverse</code> cleaning in this presentation, but the previous <a href="https://github.com/zule-lab/data-cleaning-workshop">workshop</a> also goes through all these steps using <code>data.table</code></p></li>
+</ul>
+</section>
+<section id="reading-data" class="slide level2">
+<h2>Reading Data</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># This is all the code chunks used throughout the workshop, feel free to copy and paste them from here if it makes it easier to follow along </span></span>
+<span id="cb1-2"><a href="#cb1-2"></a></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="do">#### Loading packages -----------------------------------------</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a>p <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"tidyverse"</span>, <span class="st">"anytime"</span>)</span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="fu">lapply</span>(p, library, <span class="at">character.only =</span> T)</span>
+<span id="cb1-6"><a href="#cb1-6"></a></span>
+<span id="cb1-7"><a href="#cb1-7"></a></span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="do">#### 1. Import data and investigate ---------------------------</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="co"># </span><span class="al">NOTE</span><span class="co">: this code is functioning on the assumption that you have a project set-up as per the slides provided</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a></span>
+<span id="cb1-11"><a href="#cb1-11"></a><span class="co"># initial import using tidyverse </span></span>
+<span id="cb1-12"><a href="#cb1-12"></a>tdf <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"workshop_materials/input/example-data.csv"</span>)</span>
+<span id="cb1-13"><a href="#cb1-13"></a></span>
+<span id="cb1-14"><a href="#cb1-14"></a><span class="co"># when we investigate we see that both imports have some problems</span></span>
+<span id="cb1-15"><a href="#cb1-15"></a><span class="co"># read_csv doesn't recognize that the file is delimited using ";" instead of ",". Let's use read_delim to fix that and add it to the data.table argument </span></span>
+<span id="cb1-16"><a href="#cb1-16"></a>tdf <span class="ot">&lt;-</span> <span class="fu">read_delim</span>(<span class="st">"input/example-data.csv"</span>, <span class="at">delim =</span> <span class="st">";"</span>)</span>
+<span id="cb1-17"><a href="#cb1-17"></a></span>
+<span id="cb1-18"><a href="#cb1-18"></a><span class="co"># that's slightly better, but we still have the problem that the first 7 lines in tidyverse and first 8 lines in data.table need to be removed for this to be functional </span></span>
+<span id="cb1-19"><a href="#cb1-19"></a>tdf <span class="ot">&lt;-</span> <span class="fu">read_delim</span>(<span class="st">"input/example-data.csv"</span>, <span class="at">delim =</span> <span class="st">";"</span>, <span class="at">skip =</span> <span class="dv">8</span>)</span>
+<span id="cb1-20"><a href="#cb1-20"></a></span>
+<span id="cb1-21"><a href="#cb1-21"></a><span class="co"># adding the skip argument fixes our problems! Now we can move on to other formatting issues... </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="special-characters" class="slide level2">
+<h2>Special Characters</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="do">#### 2. Special Characters &amp; UTF-8 encoding ---------------------</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="co"># What would life in Québec be without special characters! When we investigate our tidyverse dataframe, we see an issue with "Montréal" </span></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="co"># This issue often arises with accents and other special characters, when the dataframe is not properly read as UTF-8</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="co"># Luckily, we have an easy fix for this! </span></span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="co"># tidyverse can be re-encoded after import </span></span>
+<span id="cb2-6"><a href="#cb2-6"></a>tdf<span class="sc">$</span>City <span class="ot">&lt;-</span> <span class="fu">enc2utf8</span>(<span class="fu">as</span>(tdf<span class="sc">$</span>City, <span class="st">"character"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="nas-associated-values" class="slide level2">
+<h2>NAs &amp; Associated Values</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="do">#### 3. NAs &amp; associated values ---------------------------------</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="co"># there are often NAs in our datasets, which we may or may not want to keep </span></span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="co"># often, there are also other values that count, biologically, as NAs but are not read into R automatically as NAs </span></span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="co"># for example, blanks, "NA" (instead of a true NA), zeroes (for some variables), etc.</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="co"># NAs can be addressed when importing data, or after </span></span>
+<span id="cb3-6"><a href="#cb3-6"></a></span>
+<span id="cb3-7"><a href="#cb3-7"></a><span class="co"># After importing </span></span>
+<span id="cb3-8"><a href="#cb3-8"></a>tdf<span class="sc">$</span>DBH <span class="ot">&lt;-</span> <span class="fu">na_if</span>(tdf<span class="sc">$</span>DBH, <span class="dv">0</span>) <span class="co"># tidyverse</span></span>
+<span id="cb3-9"><a href="#cb3-9"></a></span>
+<span id="cb3-10"><a href="#cb3-10"></a><span class="co"># Drop the NAs (we don't want them, but you might in your analysis)</span></span>
+<span id="cb3-11"><a href="#cb3-11"></a>tdf <span class="ot">&lt;-</span> <span class="fu">drop_na</span>(tdf) <span class="co"># tidyverse</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="duplicates" class="slide level2">
+<h2>Duplicates</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="do">#### 4. Duplicates ----------------------------------------------</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="co"># sometimes, there are duplicate observations/rows in datasets. These can really mess up your analysis if you don't catch them</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="co"># testing your dataset for duplicates and then removing what you find is an important step in data cleaning! </span></span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="co"># investigate which lines are duplicates</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a>tdup <span class="ot">&lt;-</span> tdf[<span class="fu">duplicated</span>(tdf), <span class="fu">c</span>(<span class="st">"TreeID"</span>, <span class="st">"City"</span>, <span class="st">"DBH"</span>, <span class="st">"Species,"</span>)]</span>
+<span id="cb4-6"><a href="#cb4-6"></a><span class="co"># tidyverse remove duplicates</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a>tdf <span class="ot">&lt;-</span> <span class="fu">distinct</span>(tdf)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="column-names" class="slide level2">
+<h2>Column Names</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="do">#### 5. Column Names --------------------------------------------</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="co"># bad column names can make your life a living hell. Before moving into analysis make sure your column names follow best practices </span></span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="co"># you'll thank me later! You don't want numbers, special characters, or spaces in your column names. Let's change our really bad column names </span></span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="co"># tidyverse </span></span>
+<span id="cb5-5"><a href="#cb5-5"></a>tdf <span class="ot">&lt;-</span> <span class="fu">rename</span>(tdf, </span>
+<span id="cb5-6"><a href="#cb5-6"></a>              <span class="at">Date =</span> <span class="st">"1st Date Measured"</span>,</span>
+<span id="cb5-7"><a href="#cb5-7"></a>              <span class="at">Time =</span> <span class="st">"Time  Measured"</span>, </span>
+<span id="cb5-8"><a href="#cb5-8"></a>              <span class="at">Species =</span> <span class="st">"Species,"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="value-formatting" class="slide level2">
+<h2>Value Formatting</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="do">#### 6. Value Formatting ---------------------------------------</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="do">## Spelling mistakes </span></span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="co"># in our dataset, Toronto is spelled wrong. If you have a huge dataset with many spelling errors, OpenRefine is a great tool to use</span></span>
+<span id="cb6-4"><a href="#cb6-4"></a><span class="co"># for us, our dataset is small and we can visually inspect it for spelling errors so we will replace the error in R </span></span>
+<span id="cb6-5"><a href="#cb6-5"></a>tdf<span class="sc">$</span>City <span class="ot">&lt;-</span> <span class="fu">recode</span>(tdf<span class="sc">$</span>City, <span class="at">Toronno =</span> <span class="st">"Toronto"</span>)</span>
+<span id="cb6-6"><a href="#cb6-6"></a></span>
+<span id="cb6-7"><a href="#cb6-7"></a><span class="do">## Formatting column types </span></span>
+<span id="cb6-8"><a href="#cb6-8"></a><span class="co"># city and species are currently formatted as character types, but for our study we want them to act as factors - we need to reclassify them </span></span>
+<span id="cb6-9"><a href="#cb6-9"></a><span class="co"># its always important to check the classes of your data, R makes assumptions when importing your data and can be wrong! </span></span>
+<span id="cb6-10"><a href="#cb6-10"></a>tdf<span class="sc">$</span>City <span class="ot">&lt;-</span> <span class="fu">as_factor</span>(tdf<span class="sc">$</span>City)</span>
+<span id="cb6-11"><a href="#cb6-11"></a>tdf<span class="sc">$</span>Species <span class="ot">&lt;-</span> <span class="fu">as_factor</span>(tdf<span class="sc">$</span>Species)</span>
+<span id="cb6-12"><a href="#cb6-12"></a></span>
+<span id="cb6-13"><a href="#cb6-13"></a><span class="do">## Text parsing</span></span>
+<span id="cb6-14"><a href="#cb6-14"></a><span class="co"># we have a comma at the end of our species names, that we don't really want </span></span>
+<span id="cb6-15"><a href="#cb6-15"></a><span class="co"># we can use text parsing to remove those unwanted commas from the Species column</span></span>
+<span id="cb6-16"><a href="#cb6-16"></a><span class="co"># tidyverse </span></span>
+<span id="cb6-17"><a href="#cb6-17"></a>tdf<span class="sc">$</span>Species <span class="ot">&lt;-</span> <span class="fu">str_remove</span>(tdf<span class="sc">$</span>Species, <span class="st">"[,]"</span>) <span class="co"># this will remove a comma anywhere in the column</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="datetime-formatting" class="slide level2">
+<h2>Date/Time Formatting</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="do">#### 7. Date/Time Formatting -----------------------------------</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="co"># date and time formatting in R can be really tricky and frustrating sometimes but is often really necessary for field data (and other data)</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="co"># anytime is a cool package that makes the process a little bit easier </span></span>
+<span id="cb7-4"><a href="#cb7-4"></a><span class="co"># first we want a date-time column, not separate entities </span></span>
+<span id="cb7-5"><a href="#cb7-5"></a>tdf <span class="ot">&lt;-</span> <span class="fu">unite</span>(tdf, <span class="st">"DateTime"</span>, Date<span class="sc">:</span>Time, <span class="at">sep =</span> <span class="st">" "</span>)</span>
+<span id="cb7-6"><a href="#cb7-6"></a></span>
+<span id="cb7-7"><a href="#cb7-7"></a><span class="co"># now use anytime to format the columns</span></span>
+<span id="cb7-8"><a href="#cb7-8"></a><span class="co"># </span><span class="al">NOTE</span><span class="co">: Be careful of time zones, anytime will automatically set to where you are </span></span>
+<span id="cb7-9"><a href="#cb7-9"></a><span class="co"># if you are using data from other time zones and need to indicate that, use the parsedate package</span></span>
+<span id="cb7-10"><a href="#cb7-10"></a>tdf<span class="sc">$</span>DateTime <span class="ot">&lt;-</span> <span class="fu">anytime</span>(tdf<span class="sc">$</span>DateTime)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="reshaping" class="slide level2">
+<h2>Reshaping</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="do">#### 8. Reshaping ----------------------------------------------</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="co"># often the way datasets are initially set up are not ideal for things like plotting and modelling</span></span>
+<span id="cb8-3"><a href="#cb8-3"></a><span class="co"># so we need to reshape the dataframe - make it longer or wider - so we can do what we need to do</span></span>
+<span id="cb8-4"><a href="#cb8-4"></a><span class="co"># let's make the dataframe wider - we only want one entry per city </span></span>
+<span id="cb8-5"><a href="#cb8-5"></a>tdf_wide <span class="ot">&lt;-</span> <span class="fu">pivot_wider</span>(tdf, <span class="at">names_from =</span> Species, <span class="at">values_from =</span> DBH)</span>
+<span id="cb8-6"><a href="#cb8-6"></a></span>
+<span id="cb8-7"><a href="#cb8-7"></a><span class="co"># Hmmmmm that is not the most useful format - let's make it longer again (or melt it)</span></span>
+<span id="cb8-8"><a href="#cb8-8"></a>tdf_long <span class="ot">&lt;-</span> <span class="fu">pivot_longer</span>(tdf_wide, <span class="at">cols =</span> <span class="dv">4</span><span class="sc">:</span><span class="dv">14</span>, <span class="at">names_to =</span> <span class="st">"Species"</span>, <span class="at">values_to =</span> <span class="st">"DBH"</span>, <span class="at">values_drop_na =</span> T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="saving-exporting" class="slide level2">
+<h2>Saving &amp; Exporting</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="do">#### 9. Saving/Exporting Data ----------------------------------</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a><span class="co"># don't forget to save your beautiful, cleaned data!</span></span>
+<span id="cb9-3"><a href="#cb9-3"></a><span class="co"># maybe you have a "cleaned" folder in your input directory, save it there</span></span>
+<span id="cb9-4"><a href="#cb9-4"></a><span class="co"># if this is a final product, save it to output </span></span>
+<span id="cb9-5"><a href="#cb9-5"></a><span class="co"># if this is an intermediate item, the best way to save it is as an .rds file </span></span>
+<span id="cb9-6"><a href="#cb9-6"></a><span class="co"># if this is a final product or something you will be sharing, save it as a .csv</span></span>
+<span id="cb9-7"><a href="#cb9-7"></a><span class="fu">saveRDS</span>(tdf, <span class="st">"output/TidyData.rds"</span>)</span>
+<span id="cb9-8"><a href="#cb9-8"></a><span class="fu">write_csv</span>(tdf, <span class="st">"output/TidyData.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="bonus-piping" class="slide level2">
+<h2>BONUS: Piping</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="do">#### BONUS: Piping ---------------------------------------------</span></span>
+<span id="cb10-2"><a href="#cb10-2"></a><span class="co"># you may be wondering why tidyverse has so many seemingly redundant functions with baseR</span></span>
+<span id="cb10-3"><a href="#cb10-3"></a><span class="co"># the tidyverse allows you to do something called piping (%&gt;%), which can make your code much more efficient </span></span>
+<span id="cb10-4"><a href="#cb10-4"></a><span class="co"># for example, if we took all the tidyverse code from above and piped it together, it would look like this: </span></span>
+<span id="cb10-5"><a href="#cb10-5"></a>tdf <span class="ot">&lt;-</span> <span class="fu">read_delim</span>(<span class="st">"input/example-data.csv"</span>, <span class="at">delim =</span> <span class="st">";"</span>, <span class="at">skip =</span> <span class="dv">8</span>)</span>
+<span id="cb10-6"><a href="#cb10-6"></a>tdf<span class="sc">$</span>City <span class="ot">&lt;-</span> <span class="fu">enc2utf8</span>(<span class="fu">as</span>(tdf<span class="sc">$</span>City, <span class="st">"character"</span>))</span>
+<span id="cb10-7"><a href="#cb10-7"></a></span>
+<span id="cb10-8"><a href="#cb10-8"></a>tdf <span class="ot">&lt;-</span> tdf <span class="sc">%&gt;%</span></span>
+<span id="cb10-9"><a href="#cb10-9"></a>  <span class="fu">na_if</span>(<span class="dv">0</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb10-10"><a href="#cb10-10"></a>  <span class="fu">drop_na</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb10-11"><a href="#cb10-11"></a>  <span class="fu">distinct</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb10-12"><a href="#cb10-12"></a>  <span class="fu">rename</span>(<span class="at">Date =</span> <span class="st">"1st Date Measured"</span>,</span>
+<span id="cb10-13"><a href="#cb10-13"></a>         <span class="at">Time =</span> <span class="st">"Time  Measured"</span>, </span>
+<span id="cb10-14"><a href="#cb10-14"></a>         <span class="at">Species =</span> <span class="st">"Species,"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb10-15"><a href="#cb10-15"></a>  <span class="fu">mutate</span>(<span class="at">City =</span> <span class="fu">recode</span>(City, <span class="at">Toronno =</span> <span class="st">"Toronto"</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb10-16"><a href="#cb10-16"></a>  <span class="fu">mutate</span>(<span class="at">City =</span> <span class="fu">as_factor</span>(City)) <span class="sc">%&gt;%</span></span>
+<span id="cb10-17"><a href="#cb10-17"></a>  <span class="fu">mutate</span>(<span class="at">Species =</span> <span class="fu">as_factor</span>(Species)) <span class="sc">%&gt;%</span></span>
+<span id="cb10-18"><a href="#cb10-18"></a>  <span class="fu">mutate</span>(<span class="at">Species =</span> <span class="fu">str_remove</span>(Species, <span class="st">"[,]"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb10-19"><a href="#cb10-19"></a>  <span class="fu">unite</span>(<span class="st">"DateTime"</span>, Date<span class="sc">:</span>Time, <span class="at">sep =</span> <span class="st">" "</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb10-20"><a href="#cb10-20"></a>  <span class="fu">mutate</span>(<span class="at">DateTime =</span> <span class="fu">anytime</span>(DateTime)) <span class="sc">%&gt;%</span> </span>
+<span id="cb10-21"><a href="#cb10-21"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> Species, <span class="at">values_from =</span> DBH) <span class="sc">%&gt;%</span></span>
+<span id="cb10-22"><a href="#cb10-22"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="dv">4</span><span class="sc">:</span><span class="dv">14</span>, <span class="at">names_to =</span> <span class="st">"Species"</span>, <span class="at">values_to =</span> <span class="st">"DBH"</span>, <span class="at">values_drop_na =</span> T) <span class="sc">%&gt;%</span></span>
+<span id="cb10-23"><a href="#cb10-23"></a>  <span class="fu">write_csv</span>(<span class="st">"output/TidyData.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section></section>
 <section>
 <section id="part-4-resources" class="title-slide slide level1 center">
 <h1>Part 4: Resources</h1>
@@ -832,6 +1073,44 @@ RStudio_Project-&gt;data_cleaning
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

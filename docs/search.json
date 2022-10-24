@@ -112,6 +112,83 @@
     "text": "Cleaning Data in R\n\nReproducible 1\nOpen-source and cross-platform\nReliable & clear\nHigh-quality graphics\nGreat community & resources\nScales with datasets\nSteep learning curve with a high payoff\n\n Data Carpentry Data Analysis & Visualiation in R for Ecologists"
   },
   {
+    "objectID": "index.html#your-turn-if-we-have-time",
+    "href": "index.html#your-turn-if-we-have-time",
+    "title": "ZULE’s Project Starter Kit",
+    "section": "Your Turn! (if we have time)",
+    "text": "Your Turn! (if we have time)\nLet’s do some data cleaning! This code was written for a previous ZULE workshop\n\nDownload dataset from here and put it in the input/ folder you made earlier\nNOTE: we only have code for tidyverse cleaning in this presentation, but the previous workshop also goes through all these steps using data.table"
+  },
+  {
+    "objectID": "index.html#reading-data",
+    "href": "index.html#reading-data",
+    "title": "ZULE’s Project Starter Kit",
+    "section": "Reading Data",
+    "text": "Reading Data\n\n# This is all the code chunks used throughout the workshop, feel free to copy and paste them from here if it makes it easier to follow along \n\n#### Loading packages -----------------------------------------\np <- c(\"tidyverse\", \"anytime\")\nlapply(p, library, character.only = T)\n\n\n#### 1. Import data and investigate ---------------------------\n# NOTE: this code is functioning on the assumption that you have a project set-up as per the slides provided\n\n# initial import using tidyverse \ntdf <- read_csv(\"workshop_materials/input/example-data.csv\")\n\n# when we investigate we see that both imports have some problems\n# read_csv doesn't recognize that the file is delimited using \";\" instead of \",\". Let's use read_delim to fix that and add it to the data.table argument \ntdf <- read_delim(\"input/example-data.csv\", delim = \";\")\n\n# that's slightly better, but we still have the problem that the first 7 lines in tidyverse and first 8 lines in data.table need to be removed for this to be functional \ntdf <- read_delim(\"input/example-data.csv\", delim = \";\", skip = 8)\n\n# adding the skip argument fixes our problems! Now we can move on to other formatting issues..."
+  },
+  {
+    "objectID": "index.html#special-characters",
+    "href": "index.html#special-characters",
+    "title": "ZULE’s Project Starter Kit",
+    "section": "Special Characters",
+    "text": "Special Characters\n\n#### 2. Special Characters & UTF-8 encoding ---------------------\n# What would life in Québec be without special characters! When we investigate our tidyverse dataframe, we see an issue with \"Montréal\" \n# This issue often arises with accents and other special characters, when the dataframe is not properly read as UTF-8\n# Luckily, we have an easy fix for this! \n# tidyverse can be re-encoded after import \ntdf$City <- enc2utf8(as(tdf$City, \"character\"))"
+  },
+  {
+    "objectID": "index.html#nas-associated-values",
+    "href": "index.html#nas-associated-values",
+    "title": "ZULE’s Project Starter Kit",
+    "section": "NAs & Associated Values",
+    "text": "NAs & Associated Values\n\n#### 3. NAs & associated values ---------------------------------\n# there are often NAs in our datasets, which we may or may not want to keep \n# often, there are also other values that count, biologically, as NAs but are not read into R automatically as NAs \n# for example, blanks, \"NA\" (instead of a true NA), zeroes (for some variables), etc.\n# NAs can be addressed when importing data, or after \n\n# After importing \ntdf$DBH <- na_if(tdf$DBH, 0) # tidyverse\n\n# Drop the NAs (we don't want them, but you might in your analysis)\ntdf <- drop_na(tdf) # tidyverse"
+  },
+  {
+    "objectID": "index.html#duplicates",
+    "href": "index.html#duplicates",
+    "title": "ZULE’s Project Starter Kit",
+    "section": "Duplicates",
+    "text": "Duplicates\n\n#### 4. Duplicates ----------------------------------------------\n# sometimes, there are duplicate observations/rows in datasets. These can really mess up your analysis if you don't catch them\n# testing your dataset for duplicates and then removing what you find is an important step in data cleaning! \n# investigate which lines are duplicates\ntdup <- tdf[duplicated(tdf), c(\"TreeID\", \"City\", \"DBH\", \"Species,\")]\n# tidyverse remove duplicates\ntdf <- distinct(tdf)"
+  },
+  {
+    "objectID": "index.html#column-names",
+    "href": "index.html#column-names",
+    "title": "ZULE’s Project Starter Kit",
+    "section": "Column Names",
+    "text": "Column Names\n\n#### 5. Column Names --------------------------------------------\n# bad column names can make your life a living hell. Before moving into analysis make sure your column names follow best practices \n# you'll thank me later! You don't want numbers, special characters, or spaces in your column names. Let's change our really bad column names \n# tidyverse \ntdf <- rename(tdf, \n              Date = \"1st Date Measured\",\n              Time = \"Time  Measured\", \n              Species = \"Species,\")"
+  },
+  {
+    "objectID": "index.html#value-formatting",
+    "href": "index.html#value-formatting",
+    "title": "ZULE’s Project Starter Kit",
+    "section": "Value Formatting",
+    "text": "Value Formatting\n\n#### 6. Value Formatting ---------------------------------------\n## Spelling mistakes \n# in our dataset, Toronto is spelled wrong. If you have a huge dataset with many spelling errors, OpenRefine is a great tool to use\n# for us, our dataset is small and we can visually inspect it for spelling errors so we will replace the error in R \ntdf$City <- recode(tdf$City, Toronno = \"Toronto\")\n\n## Formatting column types \n# city and species are currently formatted as character types, but for our study we want them to act as factors - we need to reclassify them \n# its always important to check the classes of your data, R makes assumptions when importing your data and can be wrong! \ntdf$City <- as_factor(tdf$City)\ntdf$Species <- as_factor(tdf$Species)\n\n## Text parsing\n# we have a comma at the end of our species names, that we don't really want \n# we can use text parsing to remove those unwanted commas from the Species column\n# tidyverse \ntdf$Species <- str_remove(tdf$Species, \"[,]\") # this will remove a comma anywhere in the column"
+  },
+  {
+    "objectID": "index.html#datetime-formatting",
+    "href": "index.html#datetime-formatting",
+    "title": "ZULE’s Project Starter Kit",
+    "section": "Date/Time Formatting",
+    "text": "Date/Time Formatting\n\n#### 7. Date/Time Formatting -----------------------------------\n# date and time formatting in R can be really tricky and frustrating sometimes but is often really necessary for field data (and other data)\n# anytime is a cool package that makes the process a little bit easier \n# first we want a date-time column, not separate entities \ntdf <- unite(tdf, \"DateTime\", Date:Time, sep = \" \")\n\n# now use anytime to format the columns\n# NOTE: Be careful of time zones, anytime will automatically set to where you are \n# if you are using data from other time zones and need to indicate that, use the parsedate package\ntdf$DateTime <- anytime(tdf$DateTime)"
+  },
+  {
+    "objectID": "index.html#reshaping",
+    "href": "index.html#reshaping",
+    "title": "ZULE’s Project Starter Kit",
+    "section": "Reshaping",
+    "text": "Reshaping\n\n#### 8. Reshaping ----------------------------------------------\n# often the way datasets are initially set up are not ideal for things like plotting and modelling\n# so we need to reshape the dataframe - make it longer or wider - so we can do what we need to do\n# let's make the dataframe wider - we only want one entry per city \ntdf_wide <- pivot_wider(tdf, names_from = Species, values_from = DBH)\n\n# Hmmmmm that is not the most useful format - let's make it longer again (or melt it)\ntdf_long <- pivot_longer(tdf_wide, cols = 4:14, names_to = \"Species\", values_to = \"DBH\", values_drop_na = T)"
+  },
+  {
+    "objectID": "index.html#saving-exporting",
+    "href": "index.html#saving-exporting",
+    "title": "ZULE’s Project Starter Kit",
+    "section": "Saving & Exporting",
+    "text": "Saving & Exporting\n\n#### 9. Saving/Exporting Data ----------------------------------\n# don't forget to save your beautiful, cleaned data!\n# maybe you have a \"cleaned\" folder in your input directory, save it there\n# if this is a final product, save it to output \n# if this is an intermediate item, the best way to save it is as an .rds file \n# if this is a final product or something you will be sharing, save it as a .csv\nsaveRDS(tdf, \"output/TidyData.rds\")\nwrite_csv(tdf, \"output/TidyData.csv\")"
+  },
+  {
+    "objectID": "index.html#bonus-piping",
+    "href": "index.html#bonus-piping",
+    "title": "ZULE’s Project Starter Kit",
+    "section": "BONUS: Piping",
+    "text": "BONUS: Piping\n\n#### BONUS: Piping ---------------------------------------------\n# you may be wondering why tidyverse has so many seemingly redundant functions with baseR\n# the tidyverse allows you to do something called piping (%>%), which can make your code much more efficient \n# for example, if we took all the tidyverse code from above and piped it together, it would look like this: \ntdf <- read_delim(\"input/example-data.csv\", delim = \";\", skip = 8)\ntdf$City <- enc2utf8(as(tdf$City, \"character\"))\n\ntdf <- tdf %>%\n  na_if(0) %>%\n  drop_na() %>%\n  distinct() %>%\n  rename(Date = \"1st Date Measured\",\n         Time = \"Time  Measured\", \n         Species = \"Species,\") %>%\n  mutate(City = recode(City, Toronno = \"Toronto\")) %>% \n  mutate(City = as_factor(City)) %>%\n  mutate(Species = as_factor(Species)) %>%\n  mutate(Species = str_remove(Species, \"[,]\")) %>%\n  unite(\"DateTime\", Date:Time, sep = \" \") %>%\n  mutate(DateTime = anytime(DateTime)) %>% \n  pivot_wider(names_from = Species, values_from = DBH) %>%\n  pivot_longer(cols = 4:14, names_to = \"Species\", values_to = \"DBH\", values_drop_na = T) %>%\n  write_csv(\"output/TidyData.csv\")"
+  },
+  {
     "objectID": "index.html#section-1",
     "href": "index.html#section-1",
     "title": "ZULE’s Project Starter Kit",
