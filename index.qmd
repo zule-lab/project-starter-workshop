@@ -119,7 +119,7 @@ digraph G {
 ::: {layout-ncol="2"}
 ![](presentation_imgs/cloning1.JPG)
 
-![](presentation_imgs/cloning2.PNG)
+![](presentation_imgs/cloning2.png)
 :::
 
 ## Your Turn!
