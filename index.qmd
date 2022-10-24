@@ -14,16 +14,21 @@ editor: visual
 
 My goal for this workshop is to give everyone the tools to:
 
-::: {.incremental}
+::: incremental
 -   Confidently start a project in R
 -   Manage files in a way that is reproducible and easy to understand
 -   Allow people to document progress on their projects
 -   Know what they want to learn more about/ask me about in the coming months
 :::
 
-##
+
+## 
 
 ![](presentation_imgs/righttool.PNG){fig-align="center"}
+
+::: aside
+https://sciencecomputing.io/
+:::
 
 
 ## Software Installation
@@ -36,12 +41,63 @@ My goal for this workshop is to give everyone the tools to:
 
 -   If you have technical issues throughout this presentation - raise your hand and we will either work through together or Kayleigh will help you troubleshoot
 
+
+## Project Workflow (yours can be different!)
+
+::: {layout="[[-1], [1], [-1]]"}
+```{dot}
+//| fig-width: 10
+//| fig-align: center
+
+digraph G {
+    
+    bgcolor="transparent"
+    node [style=filled,color=white]
+    edge [color="lightblue"]
+    
+    rankdir=RL
+
+    
+    clone [shape=box]
+    data_cleaning [shape=box]
+    commit [shape=box]
+    push [shape=box]
+    
+
+    GitHub_Repo -> clone;
+    clone -> Local_Repo;
+    Local_Repo -> RStudio_Project;
+    RStudio_Project -> data_cleaning;
+    data_cleaning -> commit;
+    commit -> push;
+    push -> GitHub_Repo;
+
+}
+```
+:::
+
+
 # Part II: GitHub
 
 ## GitHub & Version Control
 
+::: incremental
+
+- GitHub is a website-software that documents your progress on a project and allows you to do *version control*
+  - aka it takes snapshots of your progress across time so nothing gets lost
+  
+- If you save rough drafts of your writing as you go along - that is version control
+
+- Really useful for when you want to go back/change your mind/re-run a test/etc. 
+
+- Facilitates peace of mind + reproducible science + collaboration/sharing
+
+:::
+
 
 ## The Basics of GitHub
+
+
 
 # Part III: R & RStudio
 
@@ -57,12 +113,11 @@ My goal for this workshop is to give everyone the tools to:
 
 # Part 4: Resources
 
-##
+## 
 
 **This workshop - including examples & code can all be found [here](https://github.com/zule-lab/project-starter-workshop) and formatted slides are [here](https://zule-lab.github.io/project-starter-workshop/)**
 
-Software Carpentry: [R for Reproducible Scientific Analysis](https://swcarpentry.github.io/r-novice-gapminder/)
-& [Version Control with git](https://swcarpentry.github.io/git-novice/)
+Software Carpentry: [R for Reproducible Scientific Analysis](https://swcarpentry.github.io/r-novice-gapminder/) & [Version Control with git](https://swcarpentry.github.io/git-novice/)
 
 Data Carpentry: [Data Analysis & Visualization in R for Ecologists](https://datacarpentry.org/R-ecology-lesson/index.html) & [Data Organization in Spreadsheets for Ecologists](https://datacarpentry.org/R-ecology-lesson/index.html)
 

@@ -7,7 +7,7 @@
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.1.251">
+  <meta name="generator" content="quarto-1.0.36">
 
   <meta name="author" content="Isabella Richmond &amp; Kayleigh Hutt-Taylor">
   <meta name="dcterms.date" content="2022-10-24">
@@ -20,15 +20,10 @@
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
-    ul.task-list li input[type="checkbox"] {
-      width: 0.8em;
-      margin: 0 0.8em 0.2em -1.6em;
-      vertical-align: middle;
-    }
   </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -349,8 +344,15 @@
 </section>
 <section id="section" class="slide level2">
 <h2></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="presentation_imgs/righttool.PNG"></p>
+</figure>
+</div>
 
-<img data-src="presentation_imgs/righttool.PNG" class="r-stretch quarto-figure-center"></section>
+<aside><div>
+<p>https://sciencecomputing.io/</p>
+</div></aside></section>
 <section id="software-installation" class="slide level2">
 <h2>Software Installation</h2>
 <ul>
@@ -363,6 +365,90 @@
 <li>If you have technical issues throughout this presentation - raise your hand and we will either work through together or Kayleigh will help you troubleshoot</li>
 </ul>
 </div>
+</section>
+<section id="project-workflow-yours-can-be-different" class="slide level2">
+<h2>Project Workflow (yours can be different!)</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="cell quarto-layout-cell" data-fig-width="10" style="flex-basis: 100.0%;justify-content: center;">
+<div class="cell-output-display">
+<div>
+<p>
+<svg width="960" height="78" viewbox="0.00 0.00 881.18 72.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style=" display: block; margin: auto auto auto auto">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 68)">
+<title>
+G
+</title>
+<!-- clone -->
+<g id="node1" class="node">
+<title>
+clone
+</title>
+<polygon fill="white" stroke="white" points="873.18,-41 819.18,-41 819.18,-5 873.18,-5 873.18,-41"></polygon> <text text-anchor="middle" x="846.18" y="-18.8" font-family="Times,serif" font-size="14.00">clone</text> </g> <!-- Local_Repo --> <g id="node6" class="node">
+<title>
+Local_Repo
+</title>
+<ellipse fill="white" stroke="white" cx="724.95" cy="-46" rx="58.46" ry="18"></ellipse> <text text-anchor="middle" x="724.95" y="-41.8" font-family="Times,serif" font-size="14.00">Local_Repo</text> </g> <!-- clone&#45;&gt;Local_Repo --> <g id="edge2" class="edge">
+<title>
+clone-&gt;Local_Repo
+</title>
+<path fill="none" stroke="lightblue" d="M819.01,-28.05C808.94,-29.99 796.99,-32.29 785.07,-34.6"></path> <polygon fill="lightblue" stroke="lightblue" points="784.26,-31.19 775.1,-36.52 785.58,-38.06 784.26,-31.19"></polygon> </g> <!-- data_cleaning --> <g id="node2" class="node">
+<title>
+data_cleaning
+</title>
+<polygon fill="white" stroke="white" points="444.82,-64 351.34,-64 351.34,-28 444.82,-28 444.82,-64"></polygon> <text text-anchor="middle" x="398.08" y="-41.8" font-family="Times,serif" font-size="14.00">data_cleaning</text> </g> <!-- commit --> <g id="node3" class="node">
+<title>
+commit
+</title>
+<polygon fill="white" stroke="white" points="315.1,-64 256.55,-64 256.55,-28 315.1,-28 315.1,-64"></polygon> <text text-anchor="middle" x="285.83" y="-41.8" font-family="Times,serif" font-size="14.00">commit</text> </g> <!-- data_cleaning&#45;&gt;commit --> <g id="edge5" class="edge">
+<title>
+data_cleaning-&gt;commit
+</title>
+<path fill="none" stroke="lightblue" d="M351.28,-46C342.71,-46 333.83,-46 325.5,-46"></path> <polygon fill="lightblue" stroke="lightblue" points="325.32,-42.5 315.32,-46 325.32,-49.5 325.32,-42.5"></polygon> </g> <!-- push --> <g id="node4" class="node">
+<title>
+push
+</title>
+<polygon fill="white" stroke="white" points="220.44,-64 166.44,-64 166.44,-28 220.44,-28 220.44,-64"></polygon> <text text-anchor="middle" x="193.44" y="-41.8" font-family="Times,serif" font-size="14.00">push</text> </g> <!-- commit&#45;&gt;push --> <g id="edge6" class="edge">
+<title>
+commit-&gt;push
+</title>
+<path fill="none" stroke="lightblue" d="M256.23,-46C248.14,-46 239.23,-46 230.75,-46"></path> <polygon fill="lightblue" stroke="lightblue" points="230.71,-42.5 220.71,-46 230.7,-49.5 230.71,-42.5"></polygon> </g> <!-- GitHub_Repo --> <g id="node5" class="node">
+<title>
+GitHub_Repo
+</title>
+<ellipse fill="white" stroke="white" cx="65.22" cy="-23" rx="65.44" ry="18"></ellipse> <text text-anchor="middle" x="65.22" y="-18.8" font-family="Times,serif" font-size="14.00">GitHub_Repo</text> </g> <!-- push&#45;&gt;GitHub_Repo --> <g id="edge7" class="edge">
+<title>
+push-&gt;GitHub_Repo
+</title>
+<path fill="none" stroke="lightblue" d="M166.29,-41.23C155.75,-39.31 143.08,-37.01 130.36,-34.69"></path> <polygon fill="lightblue" stroke="lightblue" points="130.65,-31.18 120.19,-32.83 129.4,-38.07 130.65,-31.18"></polygon> </g> <!-- GitHub_Repo&#45;&gt;clone --> <g id="edge1" class="edge">
+<title>
+GitHub_Repo-&gt;clone
+</title>
+<path fill="none" stroke="lightblue" d="M121.76,-13.91C165.84,-7.48 229.11,0 284.83,0 556.83,0 556.83,0 556.83,0 647.7,0 754.16,-11.49 808.78,-18.23"></path> <polygon fill="lightblue" stroke="lightblue" points="808.64,-21.74 818.99,-19.51 809.51,-14.79 808.64,-21.74"></polygon> </g> <!-- RStudio_Project --> <g id="node7" class="node">
+<title>
+RStudio_Project
+</title>
+<ellipse fill="white" stroke="white" cx="555.83" cy="-46" rx="74.76" ry="18"></ellipse> <text text-anchor="middle" x="555.83" y="-41.8" font-family="Times,serif" font-size="14.00">RStudio_Project</text> </g> <!-- Local_Repo&#45;&gt;RStudio_Project --> <g id="edge3" class="edge">
+<title>
+Local_Repo-&gt;RStudio_Project
+</title>
+<path fill="none" stroke="lightblue" d="M666.44,-46C658.22,-46 649.64,-46 641.05,-46"></path> <polygon fill="lightblue" stroke="lightblue" points="640.98,-42.5 630.98,-46 640.98,-49.5 640.98,-42.5"></polygon> </g> <!-- RStudio_Project&#45;&gt;data_cleaning --> <g id="edge4" class="edge">
+<title>
+RStudio_Project-&gt;data_cleaning
+</title>
+<path fill="none" stroke="lightblue" d="M480.61,-46C472.12,-46 463.58,-46 455.39,-46"></path> <polygon fill="lightblue" stroke="lightblue" points="455.22,-42.5 445.22,-46 455.22,-49.5 455.22,-42.5"></polygon> </g> </g>
+</svg>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section></section>
 <section>
 <section id="part-ii-github" class="title-slide slide level1 center">
@@ -371,6 +457,17 @@
 </section>
 <section id="github-version-control" class="slide level2">
 <h2>GitHub &amp; Version Control</h2>
+<div>
+<ul>
+<li class="fragment"><p>GitHub is a website-software that documents your progress on a project and allows you to do <em>version control</em></p>
+<ul>
+<li class="fragment">aka it takes snapshots of your progress across time so nothing gets lost</li>
+</ul></li>
+<li class="fragment"><p>If you save rough drafts of your writing as you go along - that is version control</p></li>
+<li class="fragment"><p>Really useful for when you want to go back/change your mind/re-run a test/etc.</p></li>
+<li class="fragment"><p>Facilitates peace of mind + reproducible science + collaboration/sharing</p></li>
+</ul>
+</div>
 </section>
 <section id="the-basics-of-github" class="slide level2">
 <h2>The Basics of GitHub</h2>
@@ -693,8 +790,7 @@
       for (var i=0; i<noterefs.length; i++) {
         const ref = noterefs[i];
         tippyHover(ref, function() {
-          // use id or data attribute instead here
-          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          let href = ref.getAttribute('href');
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);

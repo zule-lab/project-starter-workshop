@@ -7,6 +7,13 @@
     "text": "Learning Goals\nMy goal for this workshop is to give everyone the tools to:\n\n\nConfidently start a project in R\nManage files in a way that is reproducible and easy to understand\nAllow people to document progress on their projects\nKnow what they want to learn more about/ask me about in the coming months"
   },
   {
+    "objectID": "index.html#section",
+    "href": "index.html#section",
+    "title": "ZULE’s Project Starter Kit",
+    "section": "",
+    "text": "https://sciencecomputing.io/"
+  },
+  {
     "objectID": "index.html#software-installation",
     "href": "index.html#software-installation",
     "title": "ZULE’s Project Starter Kit",
@@ -14,11 +21,18 @@
     "text": "Software Installation\n\nCHECK-IN: does everyone have everything working/installed?\nAbsolutely the hardest part of this workshop\nThank you for doing homework!!\n\n\n\nIf you have technical issues throughout this presentation - raise your hand and we will either work through together or Kayleigh will help you troubleshoot"
   },
   {
+    "objectID": "index.html#project-workflow-yours-can-be-different",
+    "href": "index.html#project-workflow-yours-can-be-different",
+    "title": "ZULE’s Project Starter Kit",
+    "section": "Project Workflow (yours can be different!)",
+    "text": "Project Workflow (yours can be different!)\n\n\n\n \n\n\n\n\n\n\n\n\n\n\nG\n\n\n\n\nclone\n\n clone   \n\nLocal_Repo\n\n Local_Repo   \n\nclone->Local_Repo\n\n    \n\ndata_cleaning\n\n data_cleaning   \n\ncommit\n\n commit   \n\ndata_cleaning->commit\n\n    \n\npush\n\n push   \n\ncommit->push\n\n    \n\nGitHub_Repo\n\n GitHub_Repo   \n\npush->GitHub_Repo\n\n    \n\nGitHub_Repo->clone\n\n    \n\nRStudio_Project\n\n RStudio_Project   \n\nLocal_Repo->RStudio_Project\n\n    \n\nRStudio_Project->data_cleaning"
+  },
+  {
     "objectID": "index.html#github-version-control",
     "href": "index.html#github-version-control",
     "title": "ZULE’s Project Starter Kit",
     "section": "GitHub & Version Control",
-    "text": "GitHub & Version Control"
+    "text": "GitHub & Version Control\n\n\nGitHub is a website-software that documents your progress on a project and allows you to do version control\n\naka it takes snapshots of your progress across time so nothing gets lost\n\nIf you save rough drafts of your writing as you go along - that is version control\nReally useful for when you want to go back/change your mind/re-run a test/etc.\nFacilitates peace of mind + reproducible science + collaboration/sharing"
   },
   {
     "objectID": "index.html#the-basics-of-github",
